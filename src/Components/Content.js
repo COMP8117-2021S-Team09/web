@@ -157,7 +157,7 @@ function Content() {
 
             <div className="carousel-item active">
 
-              <img className="d-block w-100" src="Images/MainPage_2ndPic.png" alt="First slide" style={{ height: "600px" }} />
+              <img className="d-block w-100" src="https://i.ibb.co/z6cQrQ0/Main-Page-2nd-Pic.png" alt="First slide" style={{ height: "600px" }} />
               <div className="centered">
                 <Animated animationIn="bounceInDown" animationInDelay="2000" isVisible={true}> <p className="main"><b>Welcome to Tiffin Umbrella</b></p> </Animated>
                 <Animated animationIn="bounceInRight" animationInDelay="3000" isVisible={true}><p className="caption">Safe and healthy food</p></Animated>
@@ -166,14 +166,15 @@ function Content() {
 
             </div>
             <div className="carousel-item">
-              <img className="d-block w-100 " src="Images/tiffin-3.jpeg" alt="Second slide" style={{ height: "600px" }} />
+              <img className="d-block w-100 "  src="https://i.ibb.co/5LFmLnf/tiffin-3.jpg" alt="Second slide" style={{ height: "600px" }} />
               <div className="centered"><Animated animationIn="bounceInDown" animationInDelay="2000" isVisible={true}> <p className="main"><b>Welcome to Tiffin Umbrella</b></p> </Animated>
                 <Animated animationIn="bounceInRight" animationInDelay="3000" isVisible={true}><p className="caption">Delivered to your door</p></Animated>
                 <Animated animationIn="bounceInUp" animationInDelay="5000" isVisible={true}> <p className="box"><b>Call us now- 983-765-4321</b></p> </Animated>
               </div>
             </div>
             <div className="carousel-item">
-              <img className="d-block w-100" src="Images/new-tiffin-1.jpeg" alt="Third slide" style={{ height: "600px" }} />
+              <img className="d-block w-100" src="https://i.ibb.co/FHpxSyZ/new-tiffin-1.jpg" alt="Third slide" style={{ height: "600px" }} />
+              
               <div className="centered">
                 <Animated animationIn="bounceInDown" animationInDelay="2000" isVisible={true}> <p className="main"><b>Welcome to Tiffin Umbrella</b></p> </Animated>
                 <Animated animationIn="bounceInRight" animationInDelay="3000" isVisible={true}><p className="caption">Authentic Indian Food</p></Animated>
