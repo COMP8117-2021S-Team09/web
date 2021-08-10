@@ -19,6 +19,7 @@ export default function App(props) {
   const[modelUrl, setModelUrl] = useState();
   const [history, setHistory]= useState(useHistory());
   const serialID = window.localStorage.getItem("sellerid");
+  console.log("Seller ID", serialID);
   const url = " https://tiffin-umbrella.herokuapp.com/sellers/"+serialID+"/plans";
 
 

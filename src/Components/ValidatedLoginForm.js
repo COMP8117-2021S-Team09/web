@@ -5,9 +5,9 @@ import { Formik } from "formik";
 import * as EmailValidator from "email-validator";
 import * as Yup from "yup";
 import Axios from 'axios'; 
-import ViewSellerOrders from './ViewSellerOrders';
+
 import {useState} from "react";
-import { Redirect, useHistory } from "react-router-dom";
+import {useHistory } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
 
@@ -41,15 +41,15 @@ function ValidatedLoginForm (props) {
         } else if(res.status === 200) {
           
           console.log("Success");
-        //   window.localStorage.setItem("sellerid", res.data.id);
+         window.localStorage.setItem("sellerid", res.data.id);
         //  window.location="/viewsellerorders";
           console.log(res.data.id);
 
          history.push({
-           pathname: "/viewsellerorders",
+           pathname: "/sidebar",
            id: res.data.id
           });
-          //return <Redirect to="/viewsellerorders" />
+         
         }})
         .catch(errors => { console.log(errors) })
 
