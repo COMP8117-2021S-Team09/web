@@ -77,8 +77,9 @@ export default function ViewSellerOrders(props) {
   // const sellerid = window.localStorage.getItem("sellerid");
   // console.log("Seller ID received", props.location.id);
   // const serialID = .localStoragwindowe.getItem("sellerid");
-  const serialID= props.location.id;
-  console.log("Serial ID", serialID);
+  // const serialID= props.location.id;
+  // console.log("Serial ID", serialID);
+  const serialID = window.localStorage.getItem("sellerid");
   const url = 'https://tiffin-umbrella.herokuapp.com/sellers/'+serialID+'/orders';
 
   useEffect(() => {
