@@ -17,19 +17,7 @@ function Header() {
               </button>
 
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav mr-auto">
-                  <li className="nav-item ">
-                  <Link to="/" className="nav-link">About<span className="sr-only">(current)</span></Link>
-                  </li>
-                  <li className="nav-item">
-                  <Link to="/" className="nav-link">Tiffin Providers<span className="sr-only">(current)</span></Link>
-                  </li><br></br>
-                  <li className="nav-item">
-                  <Link to="/" className="nav-link">Gallery<span className="sr-only">(current)</span></Link>
-                  </li>
-                  
-
-                </ul>
+                
             
                   <li className="nav-link">
                   <Link to="/sellerlogin" className="nav-link login">Login<span className="sr-only">(current)</span></Link>

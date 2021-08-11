@@ -194,9 +194,7 @@ function Content() {
           </div>
           <div className="row">
             <p className="mt-4 mb-5">Hello, we are glad that you are here! Before you place the order, let us share about this
-              service. How we started and how we are doing.Hello, we are glad that you are here! Before you place the order, let us share about this
-              service. How we started and how we are doing.Hello, we are glad that you are here! Before you place the order, let us share about this
-              service. How we started and how we are doing.
+              service. How we started and how we are doing. We have started this service as part of our academic project with a team of 8 members. Our primary focus is to bring all the tiffin providers under one umbrella. 
 
             </p>
           </div>
@@ -255,8 +253,7 @@ function Content() {
             <div className="row">
 
               {
-              
-                seller.map(seller => (
+                seller.length>0?(seller.map(seller => (
                   
                 <div className="col-sm-4 w" >
                   <div className="card mt-4">
@@ -279,7 +276,10 @@ function Content() {
                   </div>
                 </div>
 
-              ))}
+                ))): 
+                (<div className="centerRed">No Sellers Found, Change the filter</div>)
+
+                }
 
             </div>
           </div>
