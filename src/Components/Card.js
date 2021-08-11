@@ -14,7 +14,7 @@ import {red} from '@material-ui/core/colors';
 import Button from "@material-ui/core/Button"
 import "./Card.css"
 import {Route, Switch, Link, BrowserRouter} from "react-router-dom";
-import { flexbox } from '@material-ui/system';
+import {flexbox} from '@material-ui/system';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
 export default function RecipeReviewCard(props) {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
-    const sellerid =props.sellerid
+    const sellerid = props.sellerid
     const sellername = props.sellername
     const imageOfSeller = props.sellerimg;
     const planid = props.planid;
@@ -62,7 +62,7 @@ export default function RecipeReviewCard(props) {
     console.log("this.props===>", props.data)
     return (
 
-        
+
         <Card className={classes.root}>
             <CardHeader
                 title={props.data.name}
@@ -82,7 +82,7 @@ export default function RecipeReviewCard(props) {
                     <h2>{props.data.description}</h2>
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                <h3>${props.data.price}</h3>
+                    <h3>${props.data.price}</h3>
                 </Typography>
             </CardContent>
             <CardActions>
@@ -94,14 +94,24 @@ export default function RecipeReviewCard(props) {
                     3D
                 </Button>
                 <Button variant="contained" color="primary">
-                <Link to={{
+                    <Link to={{
                         pathname: "/buyerinfo",
-                        data: { seller_id: sellerid, seller_name: sellername, sellerphoto:imageOfSeller, description: props.data.description, planname: props.data.name, planprice:props.data.price, planid: planid, plantype: plantype}
-                      }} style={{color: "beige", textDecoration: 'none'}}>Subscribe Now</Link>
+                        data: {
+                            seller_id: sellerid,
+                            seller_name: sellername,
+                            sellerphoto: imageOfSeller,
+                            planImage: props.data.imageUrl,
+                            description: props.data.description,
+                            planname: props.data.name,
+                            planprice: props.data.price,
+                            planid: planid,
+                            plantype: plantype
+                        }
+                    }} style={{color: "beige", textDecoration: 'none'}}>Subscribe Now</Link>
                 </Button>
             </CardActions>
         </Card>
-        
+
     );
 }
 

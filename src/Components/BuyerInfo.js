@@ -118,7 +118,7 @@ export default function App(props) {
               <div className="col-mt-4 w" >
                 <div className="card mt-4">
 
-                  <img className="card-img-top" src={sellerinfo.sellerphoto} alt="" />
+                  <img className="card-img-top" src={sellerinfo.planImage} alt="" />
                   <div className="card-body">
                     <h3 className="card-title text-secondary">{sellerinfo.seller_name}</h3>
                     <p className="card-text text-secondary"><h5><strong>Plan Name :</strong> {sellerinfo.planname}</h5></p>
