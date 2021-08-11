@@ -4,14 +4,14 @@ import { Typography } from '@material-ui/core'
 import { Formik } from "formik";
 import * as EmailValidator from "email-validator";
 import * as Yup from "yup";
-import Axios from 'axios'; 
+import Axios from 'axios';
 
 import {useState} from "react";
 import {useHistory } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
 
- 
+
 function ValidatedLoginForm (props) {
 
     const [redirect, setRedirect] =useState(false);
@@ -26,17 +26,17 @@ function ValidatedLoginForm (props) {
       }, 2000)
       console.log(props)
       console.log('Form data', values)
-      
+
       const postData = {
         email: values.email,
         password: values.password,
         role: "SELLER"
-        
-        
+
+
       };
 
       Axios.post("https://tiffin-umbrella.herokuapp.com/login", postData, { headers: { 'Content-Type': 'application/json' } })
-        .then(res => {  if(res.status!=200){
+        .then(res => {  if(res.status!==200){
           alert("Invalid Email ID/Password")
         } else if(res.status === 200) {
           
@@ -51,7 +51,9 @@ function ValidatedLoginForm (props) {
           });
          
         }})
-        .catch(errors => { console.log(errors) })
+        .catch(errors => {
+            alert('Login failure. Email or password incorrect.');
+            console.log('Login errors for seller', errors); })
 
     }}
     /* onSubmit={(values, { setSubmitting }) => {
@@ -78,7 +80,7 @@ function ValidatedLoginForm (props) {
       //   errors.password = "Required";
       // } else if (values.password.length < 8) {
       //   errors.password = "Password must be 8 characters long.";
-      
+
       // } else if (!passwordRegex.test(values.password)) {
       //   errors.password = "Invalid password. Must contain one number.";
       // }
@@ -116,7 +118,7 @@ function ValidatedLoginForm (props) {
          console.log(props)
        }
        */
-      
+
       return (
         <div>
         <div>
@@ -126,8 +128,8 @@ function ValidatedLoginForm (props) {
               <h1 >Log-In Form</h1>
               <br />
               <label htmlFor="email">Email &nbsp;</label>
-              
-              <input 
+
+              <input
                 id="email"
                 name="email"
                 type="text"
@@ -143,7 +145,7 @@ function ValidatedLoginForm (props) {
               <br />
               <br />
               <label htmlFor="password">Password &nbsp;</label>
-              <input 
+              <input
                 id="password"
                 name="password"
                 type="password"
@@ -172,17 +174,17 @@ function ValidatedLoginForm (props) {
               <Typography> For New Seller Registration ?
               <Link to="/signup" onClick={Formik.handleChange}> Sign Up </Link>
               </Typography>
-              
+
             </form>
-            
+
           </div>
-          
+
         </div>
-      
-        
-        
-       
-        
+
+
+
+
+
 
         </div>
         <br></br>
@@ -192,17 +194,17 @@ function ValidatedLoginForm (props) {
         <br></br>
         <br></br>
         <br></br>
-         <br></br> 
+         <br></br>
         <br></br>
         <br></br>
-       <br></br>     
+       <br></br>
         </div>
-       
+
       );
     }}
   </Formik>
-  
-  
+
+
   }
 
 export default ValidatedLoginForm;
