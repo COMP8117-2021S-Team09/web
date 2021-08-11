@@ -13,9 +13,16 @@
   color:#fff;
 
 }
+.centerRed {
+  margin: auto;
+  width: 60%;
+  color: red;
+  padding: 10px;
+}
 .footer{
   bottom: 0;
-  position: relative;
+  left: 0;
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
