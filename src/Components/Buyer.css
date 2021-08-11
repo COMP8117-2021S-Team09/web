@@ -1,18 +1,10 @@
-.error {
+.errorbuyer {
   color: red;
   margin-left: 125px;
   font-weight: 100;
 }
 
-body {
-  /* background: url("https://kaushikbhandary.files.wordpress.com/2017/07/home-panel-11-1-1.jpg") no-repeat center center fixed; */
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.inner {
+.innerblock {
   width: 450px;
   margin-left: 150px;
   background: #ffffff;
@@ -30,11 +22,11 @@ h2 {
   color: #3bb5e6;
 }
 
-.custom-control-label {
+.custom-control-label123 {
   font-weight: 400;
 }
 
-.cinput {
+.cinput123 {
   font-size: 16px;
   font-family: Arial;
   padding: 0.25em 0.5em;
@@ -47,12 +39,12 @@ h2 {
   margin-bottom: 10px;
 }
 
-.centerblock {
+.centerblock123 {
   color: red;
   text-align: center;
 }
 
-.p {
+.p123 {
   text-align: center;
   width: 500px;
   color: #3bb5e6;
@@ -63,11 +55,7 @@ h2 {
   border-radius: 15px;
   float: right;
   margin-right: 150px;
-  
 }
-
-
-
 button {
   border: 2px solid #3bb5e6;
   background: #ffffff;
