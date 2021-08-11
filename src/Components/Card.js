@@ -108,7 +108,7 @@ export default function RecipeReviewCard(props) {
 
 function openLinkInNewTab(linkToBeOpened) {
     if (!linkToBeOpened) {/* if linkToBeOpened is invalid */
-        linkToBeOpened = "https://3dviewer.net/embed.html#model=https://alphasingh.github.io/assets/obj/chair_lite.obj";
+        linkToBeOpened = "https://sketchfab.com/models/5276969a17d24f2ea33e57e9c78c8919/embed";
     }
     return window.open(linkToBeOpened, "_blank");
 }
